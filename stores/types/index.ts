@@ -10,5 +10,6 @@ export type AppStore = {
 
 // Project
 export type ProjectStore = {
-  readonly projects: Project[];
+  readonly openSource: Project[];
+  readonly commercial: Project[];
 };

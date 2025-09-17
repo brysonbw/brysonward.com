@@ -41,7 +41,7 @@
         <i
           v-for="(dev_icon, index) in project.dev_icons"
           :key="dev_icon + index"
-          :class="`devicon devicon-${devIcons[dev_icon]} ${dev_icon === 'typescript' && 'ml-1'}`"
+          :class="`devicon devicon-${dev_icon === 'python' ? `python-plain colored` : devIcons[dev_icon]} ${dev_icon === 'typescript' && 'ml-1'}`"
         />
       </div>
     </div>
