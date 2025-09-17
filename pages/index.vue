@@ -41,10 +41,10 @@
       <div class="flex items-center my-4 gap-1">
         <ChevronDoubleRightIcon class="w-3 h-3 text-zinc-600 font-medium dark:text-primary" />
         <NuxtLink
-          to="/portfolio"
+          to="/work"
           class="text-zinc-600 font-medium dark:text-primary"
         >
-          Portfolio: Skills & Projects</NuxtLink>
+          Work</NuxtLink>
       </div>
       <!-- Certificates -->
       <div class="flex items-center my-4 gap-1">
@@ -54,6 +54,16 @@
           class="text-zinc-600 font-medium dark:text-primary"
         >
           Certifications</NuxtLink>
+      </div>
+      <!-- Contact -->
+      <div class="flex items-center my-4 gap-1">
+        <ChevronDoubleRightIcon class="w-3 h-3 text-zinc-600 font-medium dark:text-primary" />
+        <a
+          href="mailto:brysonward77@gmail.com"
+          class="text-zinc-600 font-medium dark:text-primary"
+        >
+          Contact
+        </a>
       </div>
     </section>
   </div>

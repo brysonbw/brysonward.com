@@ -1,32 +1,45 @@
 import { defineStore } from 'pinia';
 import type { ProjectStore } from './types';
 import cesium from '@/assets/images/cesium-logo-only.png';
-import hono from '@/assets/images/hono.jpg';
+import lit from '@/assets/svgs/lit.svg';
 
 export const useProjectStore = defineStore('project', {
   state: (): ProjectStore => ({
-    projects: [
-      // {
-      //   image: '/img/code-cause.png',
-      //   image_alt: 'code-cause-non-profit-app-img',
-      //   link: 'https://codecause.dev/',
-      //   name: 'Code Cause',
-      //   description: 'An online tech-driven community fueled by purpose and powered by innovation. Building a Better World Through Code – Inspiring Innovation, Enabling Progress, and Driving Impact.',
-      //   image_icons: [],
-      //   dev_icons: ['angular', 'javascript', 'typescript', 'tailwindcss', 'firebase'],
-      // },
+    openSource: [
       {
-        image: '/img/ip-address-tracker.png',
-        image_alt: 'ip-address-tracker-app-img',
-        link: 'https://github.com/brysonbw/vue-ip-address-tracker-client',
-        name: 'IP Address Tracker',
+        image: '/img/code-cause.png',
+        image_alt: 'code-cause-non-profit-app-img',
+        link: 'https://codecause.dev/',
+        name: 'Code Cause',
+        description: 'a non-profit, online tech-driven community of developers, united in creating solutions that serve the greater good of humanity.',
+        image_icons: [{ name: 'lit', src: lit }],
+        dev_icons: ['typescript', 'firebase'],
+      },
+      {
+        image: '/img/lit-toaster.png',
+        image_alt: 'lit-toaster-img',
+        link: 'https://www.lit-toaster.com/',
+        name: 'Lit Toaster',
         description:
-          'Track, visualize, and analyze IP address locations using Vue.js and Cesium.js, with data from the IPinfo API accessed through a REST API proxy.',
+          'Notifications for Lit Web Components.',
         image_icons: [
-          { name: 'cesium-js', src: cesium },
-          { name: 'hono', src: hono, classes: 'ml-1' },
+          { name: 'lit', src: lit, classes: 'mr-2' },
         ],
-        dev_icons: ['javascript', 'typescript', 'vuetify', 'deno'],
+        dev_icons: ['npm', 'node', 'javascript'],
+      },
+      {
+        image: '/img/yc-startup-map.png',
+        image_alt: 'yc-startup-map-img',
+        link: 'https://ycstartupmap.com/',
+        name: 'YC Startup Map',
+        description:
+          'A map visualization of Y Combinator\'s YC Startup Directory.',
+        image_icons: [
+          { name: 'lit', src: lit, classes: 'mr-2' },
+          { name: 'cesium-js', src: cesium },
+
+        ],
+        dev_icons: ['typescript', 'python', 'firebase'],
       },
       {
         image: '/img/dictionary.png',
@@ -61,6 +74,18 @@ export const useProjectStore = defineStore('project', {
         dev_icons: ['html', 'css', 'javascript'],
       },
       {
+        image: '/img/lit-comp-snippets.png',
+        image_alt: 'vscode-lit-comp-snippets-preview-img',
+        link: 'https://marketplace.visualstudio.com/items?itemName=brysonbw.lit-component-snippets',
+        name: 'Lit Component Snippets',
+        description:
+          'Visual Studio Code Extension for adding Lit component snippets.',
+        image_icons: [
+          { name: 'lit', src: lit },
+        ],
+        dev_icons: ['vscode'],
+      },
+      {
         image: '/img/svelte-comp-snippets.png',
         image_alt: 'vscode-svelte-comp-snippets-preview-img',
         link: 'https://marketplace.visualstudio.com/items?itemName=brysonbw.svelte-component-snippets',
@@ -69,16 +94,8 @@ export const useProjectStore = defineStore('project', {
           'Visual Studio Code Extension for adding Svelte component snippets.',
         dev_icons: ['vscode', 'svelte'],
       },
-      {
-        image: '/img/prettier-json.png',
-        image_alt: 'library-prettier-json-preview-img',
-        link: 'https://www.npmjs.com/package/prettierrc.json',
-        name: 'prettier.json',
-        description:
-          'A cli npm library for creating a standard .prettierrc.json file.',
-        dev_icons: ['npm', 'node', 'javascript'],
-      },
     ],
+    commercial: [],
   }),
   actions: {},
   getters: {},
