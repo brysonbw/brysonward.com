@@ -113,7 +113,7 @@ import { ref, computed } from 'vue';
 import { useProjectStore } from '@/stores/project';
 
 useHead({
-  title: 'Bryson Ward | Portfolio',
+  title: 'Bryson Ward | Work',
   meta: [{ name: 'description', content: 'Bryson Ward: Full Stack Engineer.' }],
 });
 
