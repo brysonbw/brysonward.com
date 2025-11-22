@@ -1,4 +1,4 @@
-# [Nuxt 3](https://nuxt.com/docs) + Blog Portfolio Website
+# [Nuxt 4](https://nuxt.com/docs) + Blog Portfolio Website
 
 Feel free to clone, fork, or download to customize and use for your own portfolio website.
 
