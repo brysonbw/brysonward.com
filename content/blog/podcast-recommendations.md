@@ -34,6 +34,9 @@ slug: "podcast-recommendations"
 ::PodcastRecommendationCard{title="The Diary Of A CEO with Steven Bartlett" imageSrc="/img/blog/doac-thumbnail.jpg" link="https://stevenbartlett.com/doac"}
 ::
 
+::PodcastRecommendationCard{title="The Founders Podcast" imageSrc="/img/blog/founders-podcast-thumbnail.jpg" link="https://www.youtube.com/@founderspodcast1"}
+::
+
 ::PodcastRecommendationCard{title="The Knowledge Project with Shane Parrish" imageSrc="/img/blog/the-knowledge-project-thumbnail.jpg" link="https://fs.blog/episodes"}
 ::
 
