@@ -30,7 +30,7 @@ export class HomePage extends LitElement {
       </div>
       <social-links></social-links>
       <h1>Hey, I'm Bryson</h1>
-      <p class="caption">Builder, creator, and long life leaner.</p>
+      <p class="caption">Builder, creator, and lifelong learner.</p>
       <ul class="pages-list">
         ${PAGES_LIST.map(
           ({ name, href }) =>
