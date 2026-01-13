@@ -1,35 +1,56 @@
 {
+  "name": "brysonward.com",
   "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10.9.3",
+    "yarn": "please use npm",
+    "pnpm": "please use npm"
+  },
+  "description": "Bryson Ward website",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev --port 3000",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "dev": "vite --port 3005",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js --max-warnings=0",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write .",
+    "flf": "npm run format && npm run lint:fix",
+    "test": "vitest --run",
+    "prepare": "husky"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.7.23",
-    "@heroicons/vue": "^2.2.0",
-    "@nuxt/content": "^3.9.0",
-    "@nuxt/eslint": "^1.12.1",
-    "@pinia/nuxt": "^0.11.3",
-    "better-sqlite3": "^12.5.0",
-    "eslint": "^9.39.2",
-    "moment": "^2.30.1",
-    "nuxt": "^4.1.2",
-    "pinia": "^3.0.4",
-    "vue": "latest",
-    "vue-router": "latest"
+    "@lit-labs/router": "^0.1.4",
+    "lit": "^3.3.2",
+    "urlpattern-polyfill": "^10.1.0"
   },
   "devDependencies": {
-    "@nuxtjs/color-mode": "^4.0.0",
-    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@eslint/js": "^9.39.2",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/user-event": "^14.6.1",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsdoc": "^62.0.0",
+    "eslint-plugin-lit": "^2.1.1",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-security": "^3.0.1",
+    "husky": "^9.1.7",
+    "jsdom": "^27.4.0",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.7.4",
-    "typescript": "^5.9.3"
+    "prettier-eslint": "^16.4.2",
+    "terser": "^5.44.1",
+    "vite": "^7.3.1",
+    "vite-plugin-eslint": "^1.8.1",
+    "vitest": "^4.0.17"
   },
-  "overrides": {
-    "vue": "latest"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brysonbw/brysonward.com.git"
+  },
+  "keywords": [],
+  "author": "Bryson Ward"
 }

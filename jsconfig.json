@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "moduleResolution": "nodenext",
+    "module": "nodenext",
+    "baseUrl": "src",
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "noEmit": true,
+    "lib": ["es2022", "dom", "dom.iterable"]
+  },
+  "include": ["src/**/*.js", "src/vite-env.d.ts"],
+  "exclude": ["node_modules", "**/node_modules/*"]
+}
