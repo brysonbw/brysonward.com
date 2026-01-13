@@ -1,0 +1,11 @@
+node_modules
+dist/
+build
+
+coverage
+
+# uncomment below if you don't want to format test files
+# testing
+# test
+
+package-lock.json

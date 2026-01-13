@@ -1,0 +1,53 @@
+:root {
+  color: var(--white);
+  --default-font-size: 1.125rem;
+  --default-line-height: 1.6;
+  --background-color: #1a1a1a;
+  --gray: #999999;
+  --light-gray: #cccccc;
+  --dark-gray: #8a8a8a;
+  --info: #4b7ce6;
+  --error: #e04b4b;
+  --success: #4be04b;
+  --warning: #e0b44b;
+  --black: #000000;
+  --white: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+  font-size: var(--default-font-size);
+  line-height: var(--default-line-height);
+  background: var(--background-color);
+}
