@@ -61,17 +61,6 @@ export default [
       'jsdoc/require-property-description': 'off',
       'jsdoc/require-param-description': 'off',
       'jsdoc/require-returns-description': 'off',
-      'jsdoc/no-undefined-types': [
-        'error',
-        {
-          // Add the missing types to this whitelist
-          definedTypes: [
-            'PromiseSettledResult',
-            'PromiseFulfilledResult',
-            'Response',
-          ],
-        },
-      ],
     },
   },
   {
