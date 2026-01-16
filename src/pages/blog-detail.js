@@ -327,6 +327,9 @@ export class BlogDetailPage extends LitElement {
       .content ul,
       .content ol {
         margin-bottom: 1.5rem;
+        padding-left: 0;
+        margin-left: 0;
+        list-style-position: inside;
       }
 
       .content li {
