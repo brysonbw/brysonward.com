@@ -106,6 +106,12 @@ export class BlogCard extends LitElement {
         flex-grow: 1;
         line-height: 1.5;
       }
+
+      @media only screen and (max-width: 640px) {
+        .link {
+          text-align: left;
+        }
+      }
     `,
   ];
 }
