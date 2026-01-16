@@ -8,6 +8,7 @@ import {
 import { chipStyles } from '../shared/styles/chipStyles.js';
 import { blogStore } from '../stores/blog.js';
 import { ROUTES } from '../utils/constants.js';
+import { formatTimeAgo } from '../utils/dateFunctions.js';
 import { toSentenceCase } from '../utils/helpers.js';
 
 import '../shared/ui/empty-placeholder.js';
@@ -30,7 +31,7 @@ export class BlogCard extends LitElement {
 
     const { slug, title, date, description, tags } = this.data;
     return html`<ui-card>
-      <div slot="header">
+      <div slot="header" class="header">
         <button
           variant="text"
           @click=${this.#goTo}
@@ -39,9 +40,8 @@ export class BlogCard extends LitElement {
         >
           ${title}
         </button>
+        <time class="date">${formatTimeAgo(date)}</time>
       </div>
-
-      <span slot="actions" class="meta">${date}</span>
 
       <p slot="content" class="description">${description}</p>
 
@@ -80,6 +80,12 @@ export class BlogCard extends LitElement {
         --border: #30363d;
       }
 
+      .header {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+      }
+
       .link {
         color: var(--link);
         text-decoration: none;
@@ -92,9 +98,9 @@ export class BlogCard extends LitElement {
         text-decoration: underline;
       }
 
-      .meta {
+      .date {
         color: var(--gray);
-        padding: 0 0.4375rem;
+
         font-size: 0.75rem;
         font-weight: 500;
       }
@@ -105,12 +111,6 @@ export class BlogCard extends LitElement {
         margin: 0 0 1rem 0;
         flex-grow: 1;
         line-height: 1.5;
-      }
-
-      @media only screen and (max-width: 640px) {
-        .link {
-          text-align: left;
-        }
       }
     `,
   ];
