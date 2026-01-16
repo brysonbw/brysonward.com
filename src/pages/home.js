@@ -1,28 +1,30 @@
 import { LitElement, css, html } from 'lit';
 
 import thumbnail from '../assets/images/bryson-ward.png';
-import {
-  linkAnimatedUnderlineStyles,
-  linkStyles,
-} from '../shared/styles/linkStyles.js';
+import { animatedUnderlineStyles } from '../shared/styles/animatedStyles.js';
 import { responsiveImageStyles } from '../shared/styles/responsiveImageStyles.js';
 import {
   captionTextStyles,
   h1TextStyles,
 } from '../shared/styles/textStyles.js';
+import { ROUTES } from '../utils/constants.js';
 
 import '../components/social-links.js';
 
-const PAGES_LIST = Object.freeze([
-  { name: 'Work', href: '/work' },
+const PAGES_WHITELIST = /** @type {readonly string[]} */ (
+  Object.freeze([ROUTES.BLOG.NAME, ROUTES.WORK.NAME])
+);
+
+const PAGES = Object.freeze([
+  ...PAGES_WHITELIST.map((name) => {
+    const route = Object.values(ROUTES).find((item) => item.NAME === name);
+    return route ? { name: route.NAME, href: route.PATH } : null;
+  }).filter((page) => page !== null),
+
   { name: 'Contact', href: 'mailto:brysonward77@gmail.com' },
 ]);
 
 export class HomePage extends LitElement {
-  constructor() {
-    super();
-  }
-
   render() {
     return html`<div>
       <div class="logo-container">
@@ -32,7 +34,7 @@ export class HomePage extends LitElement {
       <h1>Hey, I'm Bryson</h1>
       <p class="caption">Builder, creator, and lifelong learner.</p>
       <ul class="pages-list">
-        ${PAGES_LIST.map(
+        ${PAGES.map(
           ({ name, href }) =>
             html` <li>
               <a class="reverse-animated-underline" href="${href}">${name}</a>
@@ -44,8 +46,7 @@ export class HomePage extends LitElement {
 
   static styles = [
     captionTextStyles,
-    linkStyles,
-    linkAnimatedUnderlineStyles,
+    animatedUnderlineStyles,
     responsiveImageStyles,
     h1TextStyles,
     css`
@@ -60,7 +61,6 @@ export class HomePage extends LitElement {
       }
 
       .logo {
-        filter: grayscale(100%);
         width: 200px;
         height: 200px;
         border-radius: 50%;
