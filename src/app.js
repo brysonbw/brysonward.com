@@ -3,6 +3,7 @@ import { LitElement, css, html } from 'lit';
 
 import { linkStyles } from './shared/styles/linkStyles.js';
 import { ROUTES } from './utils/constants.js';
+import { toTitleCase } from './utils/helpers.js';
 
 import './components/footer.js';
 
@@ -14,6 +15,25 @@ export class App extends LitElement {
       enter: async () => {
         await import('./pages/home.js');
         document.title = `${import.meta.env.VITE_APP_TITLE}`;
+        return true;
+      },
+    },
+    {
+      path: ROUTES.BLOG.PATH,
+      render: () => html`<blog-page></blog-page>`,
+      enter: async () => {
+        await import('./pages/blog.js');
+        document.title = `${import.meta.env.VITE_APP_NAME} | ${ROUTES.BLOG.NAME}`;
+        return true;
+      },
+    },
+    {
+      path: ROUTES.BLOG_DETAIL.PATH,
+      render: ({ slug }) =>
+        html`<blog-detail-page .slug=${slug}></blog-detail-page>`,
+      enter: async ({ slug }) => {
+        await import('./pages/blog-detail.js');
+        document.title = `${import.meta.env.VITE_APP_NAME} | ${ROUTES.BLOG.NAME} | ${toTitleCase(slug?.replaceAll('-', ' '))}`;
         return true;
       },
     },
@@ -38,10 +58,6 @@ export class App extends LitElement {
       },
     },
   ]);
-
-  constructor() {
-    super();
-  }
 
   render() {
     return html` <main>

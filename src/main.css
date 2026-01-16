@@ -3,6 +3,9 @@
   --default-font-size: 1.125rem;
   --default-line-height: 1.6;
   --background-color: #1a1a1a;
+  --card-background-color: #242424;
+  --card-border-color: var(--background-color);
+  --chip-color: #c9d1d9;
   --gray: #999999;
   --light-gray: #cccccc;
   --dark-gray: #8a8a8a;

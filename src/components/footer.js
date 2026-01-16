@@ -1,20 +1,19 @@
 import { LitElement, css, html } from 'lit';
 
 import { linkStyles } from '../shared/styles/linkStyles.js';
+import { ROUTES } from '../utils/constants.js';
 import { currentYear } from '../utils/dateFunctions.js';
 
 export class Footer extends LitElement {
-  constructor() {
-    super();
-  }
-
   render() {
     return html`<footer>
       <div class="footer-container">
         <div class="footer-text">
           <p>©${currentYear()}</p>
           •
-          <p><a href="/">${import.meta.env.VITE_APP_NAME}</a></p>
+          <p>
+            <a href="${ROUTES.HOME.PATH}">${import.meta.env.VITE_APP_NAME}</a>
+          </p>
         </div>
       </div>
     </footer>`;

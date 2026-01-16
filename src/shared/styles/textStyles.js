@@ -3,15 +3,8 @@ import { css } from 'lit';
 const captionTextStyles = css`
   .caption {
     font-size: 0.9rem;
-    color: var(--lightgray);
+    color: var(--light-gray);
     margin: 0;
-  }
-`;
-
-const uppercaseTextStyles = css`
-  .uppercase {
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
   }
 `;
 
@@ -25,4 +18,4 @@ const h1TextStyles = css`
   }
 `;
 
-export { captionTextStyles, uppercaseTextStyles, h1TextStyles };
+export { captionTextStyles, h1TextStyles };

@@ -1,3 +1,21 @@
+/** @typedef {{status: "idle" | "success" | "error", active: boolean, message: string | null}}  CopyToClipboardState */
+
+/** @typedef {"light" | "dark"} Theme */
+
+/** @typedef {"Open Source" | "Commercial"} ProjectType */
+
+/**
+ * @typedef {object} Post
+ * @property {string} title
+ * @property {string} date
+ * @property {string[]} tags
+ * @property {string} [thumbnail]
+ * @property {string} [description]
+ * @property {string | (() => Promise<string>)} content
+ * @property {string} slug
+ * @property {number} estimatedReadTime
+ */
+
 /**
  * @typedef {object} Project
  * @property {string} name
@@ -6,7 +24,7 @@
  * @property {string} description
  * @property {string} avatar_url
  * @property {string[]} technologies
- * @property {boolean} private
+ * @property {boolean} isPrivate
  */
 
 /**

@@ -18,7 +18,7 @@ class ProjectStore {
           TECHNOLOGIES.HTML,
           TECHNOLOGIES.CSS,
         ],
-        private: false,
+        isPrivate: false,
       },
       {
         name: 'lit-toaster',
@@ -32,7 +32,7 @@ class ProjectStore {
           TECHNOLOGIES.TYPESCRIPT,
           TECHNOLOGIES.JAVASCRIPT,
         ],
-        private: false,
+        isPrivate: false,
       },
       {
         name: 'fetchet',
@@ -46,7 +46,7 @@ class ProjectStore {
           TECHNOLOGIES.TYPESCRIPT,
           TECHNOLOGIES.JAVASCRIPT,
         ],
-        private: false,
+        isPrivate: false,
       },
       {
         name: 'ycstartupmap.com',
@@ -63,7 +63,7 @@ class ProjectStore {
           TECHNOLOGIES.HTML,
           TECHNOLOGIES.CSS,
         ],
-        private: false,
+        isPrivate: false,
       },
       {
         name: 'vscode-svelte-component-snippets',
@@ -75,7 +75,7 @@ class ProjectStore {
           'Visual Studio Code Extension for adding Svelte component snippets.',
         avatar_url: 'https://avatars.githubusercontent.com/u/77869922?v=4',
         technologies: [TECHNOLOGIES.VSCODE, TECHNOLOGIES.SVELTE],
-        private: false,
+        isPrivate: false,
       },
       {
         name: 'vscode-lit-component-snippets',
@@ -86,7 +86,7 @@ class ProjectStore {
           'Visual Studio Code Extension for adding Lit component snippets.',
         avatar_url: 'https://avatars.githubusercontent.com/u/77869922?v=4',
         technologies: [TECHNOLOGIES.VSCODE, TECHNOLOGIES.LIT],
-        private: false,
+        isPrivate: false,
       },
     ]),
     commercial: Object.freeze([]),

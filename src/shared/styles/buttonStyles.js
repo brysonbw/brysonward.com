@@ -27,7 +27,7 @@ const buttonTonalVariantStyles = css`
       rgba(14, 14, 14, 0.03) 0 0.0625rem 0.15625rem 0,
       rgba(14, 14, 14, 0.05) 0 0.25rem 0.5625rem 0.0625rem;
     color: black;
-    background-color: white;
+    background-color: var(--white);
     border: none;
     cursor: pointer;
     transition:

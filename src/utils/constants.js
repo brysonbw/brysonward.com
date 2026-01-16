@@ -38,10 +38,42 @@ const ROUTES = Object.freeze({
     NAME: 'Work',
     PATH: '/work',
   }),
+  BLOG: Object.freeze({
+    NAME: 'Blog',
+    PATH: '/blog',
+  }),
+  BLOG_DETAIL: Object.freeze({
+    NAME: 'Blog Post',
+    PATH: '/blog/:slug',
+  }),
   CATCH_ALL: Object.freeze({
     NAME: 'Page Not Found',
     PATH: '/*',
   }),
 });
 
-export { COLOR_PALETTE, TECHNOLOGIES, ROUTES };
+const COPY_TO_CLIPBOARD_STATE = Object.freeze({
+  IDLE: Object.freeze({
+    STATUS: 'idle',
+    MESSAGE: null,
+  }),
+  SUCCESS: Object.freeze({
+    STATUS: 'success',
+    MESSAGE: 'Copied to clipboard!',
+  }),
+  ERROR: Object.freeze({
+    STATUS: 'error',
+    MESSAGE: 'Failed to copy.',
+  }),
+});
+
+const ICONS = Object.freeze(
+  new Map([
+    ['success', '✓'],
+    ['error', '✗'],
+    ['warning', '!'],
+    ['info', 'i'],
+  ])
+);
+
+export { COLOR_PALETTE, TECHNOLOGIES, ROUTES, COPY_TO_CLIPBOARD_STATE, ICONS };

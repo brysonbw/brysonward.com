@@ -45,7 +45,7 @@ const tabStyles = css`
   .tabs button.tab-item[data-tab-active='true'] {
     font-weight: 500;
     background-color: #3b3b48;
-    color: #ffffff;
+    color: var(--white);
     border-top-left-radius: 0.25rem;
   }
 
