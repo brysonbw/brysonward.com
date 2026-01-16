@@ -2,12 +2,9 @@ import { LitElement, css, html } from 'lit';
 
 import { buttonTonalVariantStyles } from '../shared/styles/buttonStyles.js';
 import { linkStyles } from '../shared/styles/linkStyles.js';
+import { ROUTES } from '../utils/constants.js';
 
 export class NotFoundPage extends LitElement {
-  constructor() {
-    super();
-  }
-
   render() {
     return html`<div>
       <div class="title">
@@ -16,7 +13,7 @@ export class NotFoundPage extends LitElement {
       <div class="message">
         <p>Unfortunately, the requested resource could not be found.</p>
       </div>
-      <a variant="tonal" href="/">Return Home</a>
+      <a variant="tonal" href="${ROUTES.HOME.PATH}">Return Home</a>
     </div>`;
   }
 

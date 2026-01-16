@@ -31,10 +31,6 @@ const SOCIAL_LINKS = Object.freeze([
 ]);
 
 export class SocialLinks extends LitElement {
-  constructor() {
-    super();
-  }
-
   render() {
     return html`<div class="container">
       <div class="social-icons">
