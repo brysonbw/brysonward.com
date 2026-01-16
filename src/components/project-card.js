@@ -94,7 +94,7 @@ export class ProjectCard extends LitElement {
       }
 
       a[aria-label='GitHub'] img {
-        filter: brightness(7.5) contrast(0.75) saturate(0.6);
+        filter: brightness(7.5) contrast(0.75) saturate(0) grayscale(1);
         height: 1.25rem;
         width: 1.25rem;
       }
