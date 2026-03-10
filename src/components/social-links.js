@@ -4,6 +4,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import blueSky from '../assets/images/blue-sky.png';
 import discord from '../assets/images/discord.png';
 import github from '../assets/images/github.png';
+import leetcode from '../assets/images/leetcode.png';
 import linkedin from '../assets/images/linkedin.png';
 
 const SOCIAL_LINKS = Object.freeze([
@@ -22,6 +23,11 @@ const SOCIAL_LINKS = Object.freeze([
     name: 'GitHub',
     url: 'https://github.com/brysonbw',
     icon: github,
+  },
+  {
+    name: 'Leetcode',
+    url: 'https://leetcode.com/u/brysonbw/',
+    icon: leetcode,
   },
   {
     name: 'LinkedIn',
