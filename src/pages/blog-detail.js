@@ -103,12 +103,14 @@ export class BlogDetailPage extends LitElement {
           <header>
             <h1 id="title">${post?.title || post?.slug}</h1>
             <div class="caption">
-              ${post?.date
-                ? html`
-                    <time>${post.date}</time>
-                    <span class="separator">|</span>
-                  `
-                : ''}
+              ${
+                post?.date
+                  ? html`
+                      <time>${post.date}</time>
+                      <span class="separator">|</span>
+                    `
+                  : ''
+              }
 
               <span>${post?.estimatedReadTime} min read</span>
 
@@ -117,19 +119,21 @@ export class BlogDetailPage extends LitElement {
               <div class="share-container">
                 <button class="share-btn" @click=${this.#share}>Share</button>
               </div>
-              ${this._copyToClipboard.active
-                ? html`<div
-                    class=${classMap({
-                      chip: true,
-                      [this._copyToClipboard.status]:
-                        this._copyToClipboard.status,
-                    })}
-                    role="alert"
-                  >
-                    ${ICONS.get(this._copyToClipboard.status)}
-                    ${this._copyToClipboard.message}
-                  </div>`
-                : nothing}
+              ${
+                this._copyToClipboard.active
+                  ? html`<div
+                      class=${classMap({
+                        chip: true,
+                        [this._copyToClipboard.status]:
+                          this._copyToClipboard.status,
+                      })}
+                      role="alert"
+                    >
+                      ${ICONS.get(this._copyToClipboard.status)}
+                      ${this._copyToClipboard.message}
+                    </div>`
+                  : nothing
+              }
             </div>
           </header>
           <hr />

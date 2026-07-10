@@ -38,11 +38,13 @@ export class ProjectCard extends LitElement {
       </div>
 
       <div slot="actions" class="actions">
-        ${isPrivate
-          ? nothing
-          : html`<a href="${repo_url}" target="_blank" aria-label="GitHub"
-              ><img src="${github}" alt="GitHub"
-            /></a>`}
+        ${
+          isPrivate
+            ? nothing
+            : html`<a href="${repo_url}" target="_blank" aria-label="GitHub"
+                ><img src="${github}" alt="GitHub"
+              /></a>`
+        }
       </div>
 
       <p slot="content" class="description">${description}</p>
