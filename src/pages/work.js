@@ -13,7 +13,7 @@ import '../components/go-to-link.js';
 import '../components/project-card.js';
 import '../shared/ui/empty-placeholder.js';
 
-/** @type {readonly import('index.d.js').ProjectType[]} */
+/** @type {readonly import("./index.d.js").ProjectType[]} */
 const TABS = Object.freeze(['Open Source', 'Commercial']);
 const PROJECTS = projectStore.projects;
 
@@ -55,27 +55,31 @@ export class WorkPage extends LitElement {
           )}
         </ul>
         <ul class="card-grid">
-          ${this.#activeProjects.length > 0
-            ? this.#activeProjects.map(
-                (project) => html`
-                  <project-card .data=${project}></project-card>
-                `
-              )
-            : html`<empty-placeholder
-                asCard=${true}
-                text=${`No ${this._activeTab.toLowerCase()} projects to display.`}
-              ></empty-placeholder>`}
+          ${
+            this.#activeProjects.length > 0
+              ? this.#activeProjects.map(
+                  (project) => html`
+                    <project-card .data=${project}></project-card>
+                  `
+                )
+              : html`<empty-placeholder
+                  asCard=${true}
+                  text=${`No ${this._activeTab.toLowerCase()} projects to display.`}
+                ></empty-placeholder>`
+          }
         </ul>
-        ${this._activeTab === 'Open Source'
-          ? html`<div id="moreProjects">
-              <a
-                class="animated-underline"
-                target="_blank"
-                href="https://github.com/search?l=&amp;o=desc&amp;q=user%3Abrysonbw&amp;s=updated&amp;type=Repositories"
-                >View more projects</a
-              >
-            </div> `
-          : nothing}
+        ${
+          this._activeTab === 'Open Source'
+            ? html`<div id="moreProjects">
+                <a
+                  class="animated-underline"
+                  target="_blank"
+                  href="https://github.com/search?l=&amp;o=desc&amp;q=user%3Abrysonbw&amp;s=updated&amp;type=Repositories"
+                  >View more projects</a
+                >
+              </div> `
+            : nothing
+        }
         <go-to-link></go-to-link>
       </div>
     `;
